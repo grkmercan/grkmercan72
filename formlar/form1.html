@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üyelik Formu</title>
+</head>
+<body>
+    <h1>Üyelik Formu</h1>
+    <form action="/submit" method="post">
+        <label for="ad">Adınız:</label><br>
+        <input type="text" id="ad" name="ad" required><br><br>
+
+        <label for="email">E-posta:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="sifre">Şifre:</label><br>
+        <input type="password" id="sifre" name="sifre" required><br><br>
+
+        <label for="dogumtarihi">Doğum Tarihi:</label><br>
+        <input type="date" id="dogumtarihi" name="dogumtarihi"><br><br>
+
+        <label>Cinsiyet:</label><br>
+        <input type="radio" id="erkek" name="cinsiyet" value="erkek">
+        <label for="erkek">Erkek</label><br>
+        <input type="radio" id="kadin" name="cinsiyet" value="kadın">
+        <label for="kadin">Kadın</label><br><br>
+
+        <label for="hobi">Hobileriniz:</label><br>
+        <input type="checkbox" id="spor" name="hobi" value="spor">
+        <label for="spor">Spor</label><br>
+        <input type="checkbox" id="müzik" name="hobi" value="müzik">
+        <label for="müzik">Müzik</label><br>
+        <input type="checkbox" id="sanat" name="hobi" value="sanat">
+        <label for="sanat">Sanat</label><br><br>
+
+        <label for="sehir">Şehir:</label><br>
+        <select id="sehir" name="sehir">
+            <option value="adana">Adana</option>
+            <option value="istanbul">İstanbul</option>
+            <option value="ankara">Ankara</option>
+        </select><br><br>
+
+        <button type="submit">Gönder</button>
+    </form>
+</body>
+</html>
+<style>
+    form, h1{
+        padding-left: 2%;
+    }
+</style>

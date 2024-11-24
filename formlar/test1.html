@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Sayfası</title>
+  
+</head>
+<body>
+    <form action="/submit-test" method="post">
+        <fieldset>
+            <legend><b>1. HTML nedir?</b></legend>
+
+            <label for="html_soru">HTML bir programlama dili midir?</label><br>
+            <input type="radio" id="evet" name="html_soru" value="evet">
+            <label for="evet">Evet</label><br>
+            <input type="radio" id="hayir" name="html_soru" value="hayir">
+            <label for="hayir">Hayır</label><br><br>
+
+            <label for="html_aciklama">Kısa bir açıklama yapın:</label><br>
+            <textarea id="html_aciklama" name="html_aciklama" rows="4" cols="50" placeholder="Açıklamanızı buraya yazın."></textarea><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend><b>2. CSS ile ilgili bilgi</b></legend>
+
+            <label for="css_soru">CSS nedir?</label><br>
+            <input type="text" id="css_soru" name="css_soru" placeholder="CSS hakkındaki cevabınızı yazın"><br><br>
+
+            <label for="css_yazilim">CSS kullanarak yazılabilecek stil türleri nelerdir?</label><br>
+            <input type="checkbox" id="color" name="css_yazilim" value="color">
+            <label for="color">Color</label><br>
+            <input type="checkbox" id="font" name="css_yazilim" value="font">
+            <label for="font">Font</label><br>
+            <input type="checkbox" id="layout" name="css_yazilim" value="layout">
+            <label for="layout">Layout</label><br>
+            <input type="checkbox" id="background" name="css_yazilim" value="background">
+            <label for="background">Background</label><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend><b>3. JavaScript ile ilgili</b></legend>
+
+            <label for="js_durum">JavaScript ile hangi tür işlemler yapılabilir?</label><br>
+            <input type="radio" id="kodlama" name="js_durum" value="kodlama">
+            <label for="kodlama">Kodlama</label><br>
+            <input type="radio" id="web" name="js_durum" value="web">
+            <label for="web">Web geliştirme</label><br>
+            <input type="radio" id="mobil" name="js_durum" value="mobil">
+            <label for="mobil">Mobil uygulama geliştirme</label><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend><b>4. Web Tasarımı ile ilgili</b></legend>
+
+            <label for="tasarim">Web sayfası tasarımı yaparken hangi araçları kullanıyorsunuz?</label><br>
+            <input type="text" id="tasarim" name="tasarim" placeholder="Araçlar hakkında yazın"><br><br>
+
+            <label for="tasarim_secenek">Web tasarımında en çok kullanılan renkler hangileridir?</label><br>
+            <input type="color" id="tasarim_secenek" name="tasarim_secenek" value="#ff0000"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend><b>5. Zorluk Seviyesi</b></legend>
+
+            <label for="zorluk">Sınavın zorluk seviyesi nedir?</label><br>
+            <input type="range" id="zorluk" name="zorluk" min="1" max="5" step="1" value="3"><br><br>
+
+            <label for="zorluk_seviyesi">Zorluk seviyesini açıklayın:</label><br>
+            <input type="text" id="zorluk_seviyesi" name="zorluk_seviyesi" placeholder="Açıklamanızı yazın"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend><b>6. Genel Yorum</b></legend>
+
+            <label for="yorum">Test hakkında ne düşünüyorsunuz?</label><br>
+            <textarea id="yorum" name="yorum" rows="4" cols="50" placeholder="Yorumunuzu buraya yazın..."></textarea><br><br>
+        </fieldset>
+
+        <button type="submit">Gönder</button>
+    </form>
+</body>
+</html>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 110vh;
+        margin: 0;
+    }
+    form {
+        width: 80%;
+        max-width: 800px;
+    }
+</style>
