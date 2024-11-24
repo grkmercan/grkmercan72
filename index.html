@@ -1,9 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-    <title>Hoş Geldiniz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTE311</title>
+   
 </head>
 <body>
-    <h1> Web Sayfası!</h1>
+    <h1>Görkem Ercan</h1>
+    <ul>
+        <li>
+            <span class="number">1. Hafta 2</span>
+            <ul class="nested">
+                <li><a href="masal/masal.html">Masal</a></li>
+            </ul>
+        </li>
+        <li>
+            <span class="number">2. Hafta 3</span>
+            <ul class="nested">
+                <li><a href="program/tablo1.html">tablo1.html</a></li>
+                <li><a href="program/tablo2.html">tablo2.html</a></li>
+                <li><a href="program/tablo3.html">tablo3.html</a></li>
+            </ul>
+        </li>
+    </ul>
 </body>
 </html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+    ul {
+        list-style: none;
+        padding-left: 20px;
+        padding-block: 0px;
+    }
+    li{
+        padding-block: 5px;
+    }
+    .nested {
+        padding-left: 20px;
+    }
+    a {
+        text-decoration: none;
+        color: #0066cc;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .number {
+        font-weight: bold;
+    }
+</style>
