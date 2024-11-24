@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinamik Arka Plan ve Resimler</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            transition: background 0.5s ease;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding-top: 20px;
+        }
+        .card {
+            text-align: center;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            border: 2px solid #000;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img id="img1" src="img/image1.png" alt="Resim 1">
+            <button onclick="toggleImage('img1')">Göster/Gizle</button>
+        </div>
+        <div class="card">
+            <img id="img2" src="img/image2.png" alt="Resim 2">
+            <button onclick="toggleImage('img2')">Göster/Gizle</button>
+        </div>
+        <div class="card">
+            <img id="img3" src="img/image3.jpg" alt="Resim 3">
+            <button onclick="toggleImage('img3')">Göster/Gizle</button>
+        </div>
+    </div>
+
+    <script>
+        const backgroundImages = [
+            "img/1.jpg",
+            "img/2.jpg",
+            "img/3.jpg",
+            "img/4.jpg",
+            "img/5.jpg",
+            "img/6.jpg",
+            "img/7.jpg",
+            "img/8.jpg",
+            "img/9.jpg",
+            "img/10.jpg"
+        ];
+
+        const randomIndex = Math.floor(Math.random() * backgroundImages.length);
+        document.body.style.backgroundImage = `url(${backgroundImages[randomIndex]})`;
+
+        function toggleImage(imageId) {
+            const img = document.getElementById(imageId);
+            if (img.style.display === "none") {
+                img.style.display = "block";
+            } else {
+                img.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
